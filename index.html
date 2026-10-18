@@ -3651,10 +3651,10 @@ const Online = {
     const err = this.err ? `<div class="hint bad">${esc(this.err)}</div>` : '';
     const dis = this.joining ? 'disabled' : '';
     if (code) return `<section class="netbox panel"><div class="eyebrow">온라인 대전 초대</div><h1>디펜스 크래프트</h1><p class="muted">방 <b class="code">${esc(code)}</b>에 초대받았습니다. 이름만 정하면 들어갑니다. 계정은 필요 없습니다.</p>
-      <label class="field"><span>내 이름</span><input id="netname" maxlength="12" value="${nm}" placeholder="예: 지훈" autocomplete="nickname" enterkeyhint="go"></label>${err}
+      <label class="field"><span>내 이름</span><input id="netname" maxlength="12" value="${nm}" placeholder="닉네임 (12자까지)" autocomplete="nickname" enterkeyhint="go"></label>${err}
       <div class="row"><button class="btn primary" data-act="netjoin" data-code="${esc(code)}" type="button" ${dis}>${this.joining ? '연결 중…' : '참가하기'}</button><button class="btn" data-act="netcancel" type="button">혼자 하기로</button></div></section>`;
     return `<section class="netbox panel"><div class="eyebrow">친구와 온라인 대전</div><h1>방 만들기 · 참가</h1><p class="muted">방을 만들어 링크를 보내면 친구가 계정 없이 들어옵니다. 1~4명이 함께하고, 빈자리는 AI가 맡습니다.</p>
-      <label class="field"><span>내 이름</span><input id="netname" maxlength="12" value="${nm}" placeholder="예: 지훈" autocomplete="nickname" enterkeyhint="go"></label>${err}
+      <label class="field"><span>내 이름</span><input id="netname" maxlength="12" value="${nm}" placeholder="닉네임 (12자까지)" autocomplete="nickname" enterkeyhint="go"></label>${err}
       <div class="row"><button class="btn primary" data-act="netcreate" type="button" ${dis}>${this.joining ? '연결 중…' : '새 방 만들기'}</button></div>
       <div class="divider"><span>또는 코드로 참가</span></div>
       <div class="row"><input id="netcode" class="codein" maxlength="5" placeholder="ABCDE" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="방 코드"><button class="btn" data-act="netjoincode" type="button" ${dis}>참가</button></div>
